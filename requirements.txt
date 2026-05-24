@@ -1,2 +1,6 @@
-   opencv-python-headless
-
+opencv-python-headless
+matplotlib
+seaborn
+numpy
+pandas
+pillow
