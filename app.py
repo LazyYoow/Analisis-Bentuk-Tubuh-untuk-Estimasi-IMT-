@@ -94,9 +94,9 @@ def load_artifacts():
 try:
     model, scaler = load_artifacts()
     model_loaded = True
-except:
+except Exception as e:
     model_loaded = False
-    st.sidebar.warning("⚠️ model_bmi.pkl / scaler_bmi.pkl belum tersedia. Jalankan cell training terlebih dahulu.")
+    st.sidebar.warning(f"⚠️ Error: {e}")
 
 # ── IMAGE PROCESSING (sama persis dengan notebook asli) ────
 def generate_body_silhouette(height_cm, weight_kg, gender, img_size=128):
